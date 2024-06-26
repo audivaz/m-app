@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1e;
+    color: #fff;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+}
+
+header {
+    background: linear-gradient(315deg, hsla(208, 10%, 35%, 1) 0%, hsla(240, 2%, 18%, 1) 100%);
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* Add this line */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    border-radius: 10px 10px;
+    background: linear-gradient(to right, #fff 0%, #2ca6f7 100%);
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.user-profile {
+    position: relative;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown ul {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    display: none;
+}
+
+.user-profile:hover .dropdown ul {
+    display: block;
+}
+
+.dropdown ul li {
+    margin-bottom: 5px;
+}
+
+.dropdown ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    letter-spacing: 1.5px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    margin-top: 160px; /* Adjusted for fixed header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px);
+}
+
+.player-container {
+    background: linear-gradient(215deg, hsla(208, 10%, 35%, 1) 0%, hsla(240, 2%, 18%, 1) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto; /* Add this line to center the container horizontally */
+    margin-top: 160px; /* Adjusted for fixed header */
+}
+
+
+.music-note {
+width:200px; /* Ensure consistent image size */
+height: auto;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+
+.player-container h2 {
+    margin-bottom: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    background: linear-gradient(120deg, rgb(154, 236, 245) 05%, rgb(4, 75, 156) 100%);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controls button:hover {
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, rgb(97, 239, 255) 100%);
+}
+
+.controls button.play-pause {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, rgb(97, 239, 255) 100%);
+}
+
+.progress-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #3c3c3e;
+    border-radius: 5px;
+    height: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    background: linear-gradient(90deg, hsla(217, 100%, 50%, 1) 0%, rgb(97, 239, 255) 100%); 
+    height: 100%;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.1s;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.volume-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.volume-container label {
+    margin-right: 10px;
+}
+
+.volume-container input[type="range"] {
+    width: 100%;
+}
+
+.quality-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.quality-container label {
+    margin-right: 10px;
+}
+
+.quality-container select {
+    padding: 5px;
+    background-color: #3c3c3e;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+a {
+    color: #007aff;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Query for Tablet Viewport */
+@media (max-width: 1024px) {
+    .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu li a {
+        font-size: 18px;
+    }
+
+    .user-profile img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .player-container {
+        max-width: 80%;
+    }
+}
+
+/* Media Query for Mobile Viewport */
+@media (max-width: 768px) {
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    .menu li a {
+        font-size: 16px;
+    }
+
+    .user-profile img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .player-container {
+        max-width: 90%;
+        margin-top: 100px; /* Adjusted for fixed header */
+    }
+}
