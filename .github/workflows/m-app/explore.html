@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Music - Banshee Music App</title>
+    <link rel="stylesheet" href="explore.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="subscription.html"><img src="imgs/logo-B.png" alt="Logo" loading="lazy"></a>
+            </div>
+            <ul class="menu" role="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="player.html">Player</a></li>
+            </ul>
+            <div class="user-profile">
+                <a href="profile.html"><img class="profile-icon" src="imgs/profile-icon-B.png" alt="User Profile" loading="lazy"></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <input type="text" class="search-bar" placeholder="Search for artists, songs, or albums...">
+        
+        <div class="filters">
+            <select title="Select an option">
+                <option value="">Genre</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="hiphop">Hip-Hop</option>
+                <!-- Add more genres as needed -->
+            </select>
+            <select title="Select an option">
+                <option value="">Popularity</option>
+                <option value="most-popular">Most Popular</option>
+                <option value="trending">Trending</option>
+                <option value="new-releases">New Releases</option>
+            </select>
+            <select title="Select an option">
+                <option value="">Release Date</option>
+                <option value="last-week">Last Week</option>
+                <option value="last-month">Last Month</option>
+                <option value="last-year">Last Year</option>
+            </select>
+        </div>
+
+        <div class="section">
+            <h2>Featured Artists</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="assets/images/artist1.jpg" alt="Artist 1">
+                    <h3>Artist 1</h3>
+                    <button>View Profile</button>
+                </div>
+                <div class="item">
+                    <img src="assets/images/artist2.jpg" alt="Artist 2">
+                    <h3>Artist 2</h3>
+                    <button>View Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Recommended Music</h2>
+            <div class="items">
+                <div class="item">
+                    <img src="assets/images/album1.jpg" alt="Album 1">
+                    <h3>Album 1</h3>
+                    <button>Play</button>
+                </div>
+                <div class="item">
+                    <img src="assets/images/album2.jpg" alt="Album 2">
+                    <h3>Album 2</h3>
+                    <a href="player.html" target="_blank">
+                    <button>Play</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button>Previous</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+        </div>
+    </div>
+    <script src="js/explore.js"></script>
+</body>
+</html>

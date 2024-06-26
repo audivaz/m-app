@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Banshee Music App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="player.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="subscription.html"><img src="imgs/logo-B.png" alt="Logo" loading="lazy"></a>
+            </div>
+            <ul class="menu" role="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="library.html">Library</a></li>
+                <li><a href="player.html">Player</a></li>
+            </ul>
+            <div class="user-profile">
+                <a href="profile.html"><img class="profile-icon" src="imgs/profile-icon-B.png" alt="User Profile" loading="lazy"></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="settings.html">Settings</a></li>
+                        <li><a href="#">Notifications</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="player-container">
+            <img class="music-note" src="https://via.placeholder.com/100" alt="Album 1">
+            <h2>Song Title</h2>
+            <p>Artist Name</p>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <div class="time">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">3:45</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev">&laquo;</button>
+                <button class="play-pause" id="play-pause">&#9658;</button>
+                <button id="next">&raquo;</button>
+            </div>
+            <div class="volume-container">
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" name="volume" min="0" max="1" step="0.01" value="0.5">
+            </div>
+            <div class="quality-container">
+                <label for="quality">Quality</label>
+                <select id="quality" name="quality">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+            <!-- Add the audio element -->
+            <audio id="audio" src="mp3/Construyendo en el Espacio - Luna Cantina.mp3"></audio>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+   
+    <script src="player.js"></script>
+</body>
+</html>

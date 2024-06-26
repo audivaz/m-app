@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Banshee Music App</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="Logo">
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="library.html">Library</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="user-profile">
+            <img src="assets/images/profile.png" alt="User Profile">
+            <div class="dropdown">
+                <ul>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="#">Notifications</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <img src="assets/images/profile.png" alt="User Profile Picture">
+        <h1>Username</h1>
+        <button class="settings-button" onclick="location.href='settings.html'">Settings</button>
+    </div>
+    <div class="profile-details">
+        <h2>My Playlists</h2>
+        <div class="playlists">
+            <div class="playlist">
+                <img src="assets/images/playlist1.jpg" alt="Chill Vibes">
+                <h3>Chill Vibes</h3>
+            </div>
+            <div class="playlist">
+                <img src="assets/images/playlist2.jpg" alt="Workout Mix">
+                <h3>Workout Mix</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>
